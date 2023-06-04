@@ -1,0 +1,14 @@
+{
+  "name": "rocket-layout",
+  "version": "1.0.0",
+  "description": "Gulp Fron",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eneroice/rocket-layout.git"
+  },
+	"keywords": ["gulp", "boilerplate", "sass", "scss", "js", "layout", "template"],
+  "author": "Eneroice",
+  "license": "WTFPL"
+}
