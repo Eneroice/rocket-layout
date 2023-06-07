@@ -7,6 +7,7 @@
     "dev": "gulp development",
     "prepare": "husky install"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Eneroice/rocket-layout.git"
@@ -27,6 +28,7 @@
     "@babel/eslint-parser": "^7.21.8",
     "@babel/preset-env": "^7.22.4",
     "@babel/register": "^7.21.0",
+    "del": "^7.0.0",
     "eslint": "^8.42.0",
     "eslint-config-google": "^0.14.0",
     "gulp": "^4.0.2",

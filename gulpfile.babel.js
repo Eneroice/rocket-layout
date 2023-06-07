@@ -1,9 +1,6 @@
-import config from './core/config';
+import gulp from 'gulp';
+import clean from './core/clean.task.js';
 
-exports.development = () => {
-  console.log('config.buildMode');
-};
-
-exports.buildProject = () => {
-  console.log(config.buildMode);
-};
+export const development = gulp.series(
+    clean,
+);
