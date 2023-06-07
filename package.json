@@ -3,12 +3,34 @@
   "version": "1.0.0",
   "description": "Gulp Fron",
   "scripts": {
+    "build": "gulp buildProject",
+    "dev": "gulp development",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Eneroice/rocket-layout.git"
   },
-	"keywords": ["gulp", "boilerplate", "sass", "scss", "js", "layout", "template"],
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "sass",
+    "scss",
+    "js",
+    "layout",
+    "template"
+  ],
   "author": "Eneroice",
-  "license": "WTFPL"
+  "license": "WTFPL",
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/eslint-parser": "^7.21.8",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/register": "^7.21.0",
+    "eslint": "^8.42.0",
+    "eslint-config-google": "^0.14.0",
+    "gulp": "^4.0.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2"
+  }
 }
