@@ -1,7 +1,7 @@
 import config from './core/config';
 
 exports.development = () => {
-  console.log(config.buildMode);
+  console.log('config.buildMode');
 };
 
 exports.buildProject = () => {
