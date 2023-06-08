@@ -18,6 +18,10 @@ const config = {
     images: `${result}/img`,
     fonts: `${result}/fonts`,
   },
+  setEnv() {
+    this.isDev = process.argv.includes('--dev');
+    this.isProd = process.argv.includes('--build');
+  },
 };
 
 export default config;

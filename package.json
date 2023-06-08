@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Gulp Fron",
   "scripts": {
-    "build": "gulp buildProject",
-    "dev": "gulp development",
+    "build": "gulp main --build",
+    "dev": "gulp main --dev",
     "prepare": "husky install"
   },
   "type": "module",
@@ -28,12 +28,19 @@
     "@babel/eslint-parser": "^7.21.8",
     "@babel/preset-env": "^7.22.4",
     "@babel/register": "^7.21.0",
+    "babelify": "^10.0.0",
     "browser-sync": "^2.29.3",
+    "browserify": "^17.0.0",
     "del": "^7.0.0",
     "eslint": "^8.42.0",
     "eslint-config-google": "^0.14.0",
     "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2"
+    "lint-staged": "^13.2.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
