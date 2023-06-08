@@ -28,6 +28,7 @@
     "@babel/eslint-parser": "^7.21.8",
     "@babel/preset-env": "^7.22.4",
     "@babel/register": "^7.21.0",
+    "browser-sync": "^2.29.3",
     "del": "^7.0.0",
     "eslint": "^8.42.0",
     "eslint-config-google": "^0.14.0",
