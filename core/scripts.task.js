@@ -5,6 +5,7 @@ import vinylBuffer from 'vinyl-buffer';
 import gulpIf from 'gulp-if';
 import gulpUglify from 'gulp-uglify';
 import gulpSourcemaps from 'gulp-sourcemaps';
+import gulpRename from 'gulp-rename';
 import config from './config.js';
 
 const scripts = () => (
@@ -12,6 +13,7 @@ const scripts = () => (
       .transform('babelify', {presets: ['@babel/preset-env']})
       .bundle()
       .pipe(vinylSourceStream('main.js'))
+      .pipe(gulpIf(config.isProd, gulpRename({suffix: '.min'})))
       .pipe(vinylBuffer())
       .pipe(gulpIf(config.isDev, gulpSourcemaps.init({loadMaps: true})))
       .pipe(gulpIf(config.isProd, gulpUglify()))
