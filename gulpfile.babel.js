@@ -57,7 +57,7 @@ export const createBEMBlock = async () => {
       });
       fs.appendFile(
           `${config.src.root}/blocks/_blocks.js`,
-          `import '${blockName}/${blockName}.js';\n`,
+          `import './${blockName}/${blockName}.js';\n`,
           function(err) {
             if (err) throw err;
           });

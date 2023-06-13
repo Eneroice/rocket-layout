@@ -11,11 +11,11 @@ const watcher = () => {
   ], views);
   gulp.watch([
     `${config.src.styles}/**/*.scss`,
-    `${config.src.root}/blocks/_blocks.scss`,
+    `${config.src.root}/blocks/**/*.scss`,
   ], styles);
   gulp.watch([
     `${config.src.scripts}/**/*.js`,
-    `${config.src.root}/blocks/_blocks.js`,
+    `${config.src.root}/blocks/**/*.js`,
   ], scripts);
 };
 
