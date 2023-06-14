@@ -16,7 +16,7 @@ const styles = () => {
   return gulp.src(`${config.src.styles}/main.scss`)
       .pipe(gulpPlumber())
       .pipe(gulpIf(config.isDev, gulpSourcemaps.init({loadMaps: true})))
-      .pipe(sass().on('error', sass.logError))
+      .pipe(sass())
       .pipe(gulpIf(config.isProd, gcmq()))
       .pipe(gulpIf(config.isProd, gulpAutoprefixer()))
       .pipe(gulpIf(config.isProd, gulpCleanCss({
