@@ -14,7 +14,11 @@ const sass = gulpSass(nodeSass);
 
 const styles = () => {
   return gulp.src(`${config.src.styles}/main.scss`)
-      .pipe(gulpPlumber())
+      .pipe(gulpPlumber({
+        errorHandler: function(err) {
+          console.log(err);
+          this.emit('end');
+        }}))
       .pipe(gulpIf(config.isDev, gulpSourcemaps.init({loadMaps: true})))
       .pipe(sass())
       .pipe(gulpIf(config.isProd, gcmq()))
