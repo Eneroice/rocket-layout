@@ -18,8 +18,9 @@ Rocket Layout — это простая Gulp-сборка, которая реш
 | `$ npm run build` | Запускает сборку проекта             | gulp main --build              |
 | `$ npm run bem`   | Запускает процесс создания BEM-блока | gulp createBEMBlock --css --js |
 
-> Отличия режима «dev» и «build»:
->— «dev» запускает лайв-сервер для разработки
->(Gulp-задачи `watcher.task.js` & `server.task.js`)
->— «dev» генерирует исходные карты (sourcemaps) для .css и .js
->— «build» минифицирует файлы .css и .js
+### Отличия режима «dev» и «build»:
+1. «dev» запускает лайв-сервер для разработки
+(Gulp-задачи `watcher.task.js` & `server.task.js`)
+
+2. «dev» генерирует исходные карты (sourcemaps) для .css и .js
+3. «build» минифицирует файлы .css и .js
