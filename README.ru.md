@@ -3,6 +3,15 @@
 
 Rocket Layout — это простая Gulp-сборка, которая решает множество рутинных задач при верстке макета сайта.
 
+## :scroll: Разделы
+##### [:sparkles: Особенности сборки](#sparkles-особенности-сборки)
+##### [:exclamation: Рекомендации](#grey_exclamation-рекомендации)
+##### [:point_right: Начало работы](#point_right-начало-работы)
+##### [:open_file_folder: Файловая структура](#open_file_folder-файловая-структура)
+##### [:speech_balloon: NPM-скрипты](#speech_balloon-npm-скрипты)
+##### [:package: Зависимости](#package-зависимости)
+---
+
 ## :sparkles: Особенности сборки
 * Используется препроцессор `SASS (SCSS)`
 * Используется транскомпилятор `Babel` для JavaScript
@@ -11,11 +20,10 @@ Rocket Layout — это простая Gulp-сборка, которая реш
 * Используется методология БЭМ (частично)
 * Автоматический парсинг мета-данных шрифтов для создания полного `@font-face`
 
-## :grey_exclamation: Рекомендации
+## :exclamation: Рекомендации
 > Рекомендуется использовать для разработки [Visual Studio Code](https://code.visualstudio.com)
 1. Установите расширение [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-2. Установите расширение [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-Добавьте в `settings.json` редактора кода следующие настройки:
+2. Установите расширение [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)<br>Добавьте в `settings.json` редактора кода следующие настройки:
 ```
 "stylelint.validate": [
   "css",
@@ -30,7 +38,7 @@ Rocket Layout — это простая Gulp-сборка, которая реш
 
 2. Перейдите в папку со сборкой: `$ cd rocket-layout`
 3. Установите все необходимые зависимости с помощью пакетного менеджера (NPM): `$ npm i`
-4. Теперь сборка готова к работе, перейдите к [разделу команд](#:speech_balloon:NPM-скрипты)
+4. Теперь сборка готова к работе, перейдите к [разделу команд](#speech_balloon-npm-скрипты)
 
 ## :open_file_folder: Файловая структура
 ```
@@ -134,3 +142,5 @@ Rocket Layout — это простая Gulp-сборка, которая реш
 | Лайв-сервер для разработки<br>`server.task.js` & `watcher.task.js`   | :heavy_plus_sign:      | :heavy_minus_sign:                |
 | Исходные карты (sourcemaps)<br>`.css` `.js` | :heavy_plus_sign:   | :heavy_minus_sign:     |
 | Минификация файлов<br>`.css` `.js`  | :heavy_minus_sign: | :heavy_plus_sign: |
+
+## :package: Зависимости
