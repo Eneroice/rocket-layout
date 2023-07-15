@@ -1,0 +1,4 @@
+@include font-face($name: 'Montserrat', $path: '../fonts/Montserrat-Light.woff2', $weight: 300);
+@include font-face($name: 'Montserrat', $path: '../fonts/Montserrat-Medium.woff2', $weight: 500);
+@include font-face($name: 'Montserrat', $path: '../fonts/Montserrat-Regular.woff2', $weight: 400);
+@include font-face($name: 'Montserrat', $path: '../fonts/Montserrat-Bold.woff2', $weight: 700);
