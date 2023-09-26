@@ -1,0 +1,30 @@
+@import "./vars";
+@import "./media";
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include container-max-width;
+
+  @include media-down(568) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.container-max {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  column-gap: $grid-gutter;
+  row-gap: $grid-gutter;
+
+  @include media-down(568) {
+    grid-column-gap: unset;
+  }
+}

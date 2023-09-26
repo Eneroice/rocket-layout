@@ -6,6 +6,7 @@ import gulpIf from 'gulp-if';
 import gulpUglify from 'gulp-uglify';
 import gulpSourcemaps from 'gulp-sourcemaps';
 import gulpRename from 'gulp-rename';
+import gulpDebug from 'gulp-debug';
 import config from './config.js';
 
 const scripts = () => (
@@ -18,6 +19,7 @@ const scripts = () => (
       .pipe(gulpIf(config.isDev, gulpSourcemaps.init({loadMaps: true})))
       .pipe(gulpIf(config.isProd, gulpUglify()))
       .pipe(gulpIf(config.isDev, gulpSourcemaps.write()))
+      .pipe(gulpIf(config.debugMode, gulpDebug({title: '[RL Debug] Scripts:'})))
       .pipe(gulp.dest(config.res.scripts))
 );
 

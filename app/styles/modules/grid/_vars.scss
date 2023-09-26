@@ -1,0 +1,20 @@
+$grid-columns: 12 !default;
+$grid-gutter: 2rem !default;
+$grid-breakpoints: (
+  0: 0,
+  568: 568px,
+  768: 768px,
+  1024: 1024px,
+  1280: 1280px,
+  1440: 1440px,
+  1920: 1920px
+) !default;
+$grid-container-width: (
+  0: 100%,
+  568: 100%,
+  768: 736px,
+  1024: 640px,
+  1280: 1120px,
+  1440: 1252px,
+  1920: 1728px
+) !default;

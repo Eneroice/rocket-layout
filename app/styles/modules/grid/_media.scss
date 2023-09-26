@@ -1,0 +1,19 @@
+@mixin media-up($breakpoint: $grid-breakpoints) {
+  @media only screen and (min-width: ($breakpoint + px)) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint: $grid-breakpoints) {
+  @media only screen and (max-width: ($breakpoint + px)) {
+    @content;
+  }
+}
+
+@mixin container-max-width($max-widths: $grid-container-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $grid-container-width in $max-widths {
+    @include media-up($breakpoint) {
+      max-width: $grid-container-width;
+    }
+  }
+}

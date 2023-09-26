@@ -12,6 +12,7 @@ export const main = gulp.series(
         Core.styles,
         Core.scripts,
         Core.fonts,
+        Core.images,
     ),
     (Core.config.isDev ? gulp.parallel(Core.server) : []),
     (Core.config.isDev ? gulp.parallel(Core.watcher) : []),

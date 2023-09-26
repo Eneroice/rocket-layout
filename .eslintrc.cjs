@@ -13,7 +13,7 @@ module.exports = {
     'linebreak-style': 0,
     'max-len': [
       'error', {
-        'code': 100,
+        'code': 105,
       },
     ],
   },

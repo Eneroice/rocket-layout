@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import views from './views.task.js';
 import styles from './styles.task.js';
 import scripts from './scripts.task.js';
+import images from './images.task.js';
 import config from './config.js';
 
 const watcher = () => {
@@ -17,6 +18,9 @@ const watcher = () => {
     `${config.src.scripts}/**/*.js`,
     `${config.src.root}/blocks/**/*.js`,
   ], scripts);
+  gulp.watch([
+    `${config.src.images}/**/*.{jpg,jpeg,png,gif,tiff,svg,webp}`,
+  ], images);
 };
 
 export default watcher;

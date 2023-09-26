@@ -2,11 +2,14 @@ import fs from 'fs';
 import gulp from 'gulp';
 import ttf2woff2 from 'gulp-ttf2woff2';
 import ttfMeta from 'ttfmeta';
+import gulpIf from 'gulp-if';
+import gulpDebug from 'gulp-debug';
 import config from './config.js';
 
 const fonts = () => {
   return gulp.src(`${config.src.fonts}/**/*.ttf`)
       .pipe(ttf2woff2())
+      .pipe(gulpIf(config.debugMode, gulpDebug({title: '[RL Debug] Fonts:'})))
       .pipe(gulp.dest(config.res.fonts));
 };
 

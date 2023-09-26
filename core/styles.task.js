@@ -8,6 +8,7 @@ import gcmq from 'gulp-group-css-media-queries';
 import gulpAutoprefixer from 'gulp-autoprefixer';
 import gulpCleanCss from 'gulp-clean-css';
 import gulpRename from 'gulp-rename';
+import gulpDebug from 'gulp-debug';
 import config from './config.js';
 
 const sass = gulpSass(nodeSass);
@@ -29,6 +30,7 @@ const styles = () => {
       })))
       .pipe(gulpIf(config.isProd, gulpRename({suffix: '.min'})))
       .pipe(gulpIf(config.isDev, gulpSourcemaps.write()))
+      .pipe(gulpIf(config.debugMode, gulpDebug({title: '[RL Debug] Styles:'})))
       .pipe(gulp.dest(config.res.styles));
 };
 

@@ -2,6 +2,7 @@ const source = 'app';
 const result = 'dist';
 
 const config = {
+  debugMode: false,
   src: {
     root: source,
     views: `${source}/views`,
