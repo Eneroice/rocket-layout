@@ -40,6 +40,7 @@
     "gulp-changed": "^4.0.3",
     "gulp-clean-css": "^4.3.0",
     "gulp-debug": "^4.0.0",
+    "gulp-favicons": "^4.0.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-html-extend": "^1.1.6",
     "gulp-if": "^3.0.0",

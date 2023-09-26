@@ -6,6 +6,7 @@ import webp from 'imagemin-webp';
 import pngquant from 'imagemin-pngquant';
 import gulpRename from 'gulp-rename';
 import gulpDebug from 'gulp-debug';
+import gulpFavicons from 'gulp-favicons';
 import config from './config.js';
 
 const dest = config.res.images;
@@ -34,7 +35,10 @@ const images = () => {
 };
 
 const webpConvert = () => {
-  return gulp.src(`${config.src.images}/**/*.{jpg,jpeg,png}`)
+  return gulp.src([
+    `${config.src.images}/**/*.{jpg,jpeg,png}`,
+    `!${config.src.images}/favicon.png`,
+  ])
       .pipe(gulpChanged(dest, {extension: '.webp'}))
       .pipe(gulpIf(config.isProd, gulpImagemin([
         webp({quality: 75}),
@@ -44,4 +48,28 @@ const webpConvert = () => {
       .pipe(gulp.dest(dest));
 };
 
-export default gulp.series(images, webpConvert);
+const faviconGen = () => {
+  return gulp.src(`${config.src.images}/favicon.png`)
+      .pipe(
+          gulpFavicons({
+            appName: config.manifest.appName,
+            appShortName: config.manifest.appShortName,
+            appDescription: config.manifest.appDescription,
+            developerName: config.manifest.developerName,
+            developerURL: config.manifest.developerURL,
+            background: config.manifest.backgroundColor,
+            theme_color: config.manifest.themeColor,
+            lang: config.manifest.language,
+            path: '',
+            url: config.manifest.appURL,
+            display: config.manifest.display,
+            orientation: config.manifest.orientation,
+            scope: '/',
+            start_url: '/',
+            version: config.manifest.version,
+          }),
+      )
+      .pipe(gulp.dest(`${dest}/favicons`));
+};
+
+export default gulp.series(images, webpConvert, faviconGen);

@@ -14,7 +14,7 @@ const views = () => {
   ])
       .pipe(gulpIf(config.isProd, gulpReplace('.css', '.min.css')))
       .pipe(gulpIf(config.isProd, gulpReplace('.js', '.min.js')))
-      .pipe(gulpHtmlExtender({annotations: false}))
+      .pipe(gulpHtmlExtender({annotations: true}))
       .pipe(gulpPrettyHtml())
       .pipe(gulpIf(config.debugMode, gulpDebug({title: '[RL Debug] Views:'})))
       .pipe(gulp.dest(config.res.views));
