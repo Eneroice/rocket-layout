@@ -1,0 +1,12 @@
+:root {
+  --clr-main: #000;
+  --clr-black: #000;
+  --clr-white: #FFF;
+}
+
+* {
+  &::selection {
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+  }
+}
